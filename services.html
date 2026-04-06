@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Services LinguaPro - Traduction, interprétation, localisation, sous-titrage et relecture professionnels.">
+  <title>Services - LinguaPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .service-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
+    .service-detail:nth-child(even) { direction: rtl; }
+    .service-detail:nth-child(even) > * { direction: ltr; }
+    .service-detail img { border-radius: 12px; width: 100%; height: 350px; object-fit: cover; }
+    .service-detail-content h2 { margin-bottom: 1rem; }
+    .service-detail-content p { margin-bottom: 1.5rem; }
+    .service-list li { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.7rem; font-size: 0.95rem; }
+    .service-list li i { color: var(--accent); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .pricing-card { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.07); text-align: center; transition: var(--transition); border: 2px solid transparent; }
+    .pricing-card.featured { border-color: var(--accent); transform: scale(1.05); }
+    .pricing-card:hover { transform: scale(1.03); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .pricing-card.featured:hover { transform: scale(1.06); }
+    .pricing-card .badge-featured { background: var(--accent); color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+    .pricing-card h3 { margin-bottom: 0.5rem; }
+    .pricing-card .price { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin: 1rem 0; }
+    .pricing-card .price small { font-size: 1rem; font-weight: 400; color: #999; }
+    .pricing-card ul { text-align: left; margin: 1.5rem 0; }
+    .pricing-card ul li { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.7rem; font-size: 0.9rem; }
+    .pricing-card ul li i { color: var(--accent); }
+    @media (max-width: 768px) { .service-detail { grid-template-columns: 1fr; } .service-detail:nth-child(even) { direction: ltr; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      <div class="logo-icon">L</div>
+      <span>Lingua<strong>Pro</strong></span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="courses.html">Formations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="gallery.html">Galerie</a></li>
+      <li><a href="careers.html">Carrières</a></li>
+      <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+    </ul>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Nos <span class="text-accent">Services</span></h1>
+    <p>Des solutions linguistiques complètes pour tous vos besoins professionnels et personnels.</p>
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a><span>/</span><span class="current">Services</span>
+    </nav>
+  </div>
+</div>
+
+<!-- SERVICES OVERVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="services-grid" style="margin-bottom:4rem">
+      <div class="service-card animate">
+        <div class="icon"><i class="fas fa-language"></i></div>
+        <h3>Traduction</h3>
+        <p>Juridique, médicale, technique, littéraire — nos traducteurs natifs couvrent tous les domaines avec précision.</p>
+        <a href="#traduction">Détails <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card animate">
+        <div class="icon"><i class="fas fa-microphone"></i></div>
+        <h3>Interprétation</h3>
+        <p>Simultanée, consécutive ou chuchotée pour vos conférences, réunions et événements.</p>
+        <a href="#interpretation">Détails <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card animate">
+        <div class="icon"><i class="fas fa-globe"></i></div>
+        <h3>Localisation</h3>
+        <p>Adaptation culturelle complète de vos produits, sites web et applications mobiles.</p>
+        <a href="#localisation">Détails <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card animate">
+        <div class="icon"><i class="fas fa-closed-captioning"></i></div>
+        <h3>Sous-titrage</h3>
+        <p>Sous-titrage et doublage professionnel pour films, séries, formations et contenus corporate.</p>
+        <a href="#sous-titrage">Détails <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card animate">
+        <div class="icon"><i class="fas fa-spell-check"></i></div>
+        <h3>Relecture</h3>
+        <p>Révision et correction de vos textes par des experts pour un rendu impeccable.</p>
+        <a href="#relecture">Détails <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card animate">
+        <div class="icon"><i class="fas fa-file-contract"></i></div>
+        <h3>Traduction assermentée</h3>
+        <p>Documents officiels traduits et certifiés par des traducteurs assermentés agréés.</p>
+        <a href="#assermentee">Détails <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- SERVICE DETAILS -->
+    <div id="traduction" class="service-detail animate">
+      <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=700&q=80" alt="Traduction professionnelle">
+      <div class="service-detail-content">
+        <h2>Traduction <span class="text-accent">professionnelle</span></h2>
+        <p>Notre réseau de plus de 200 traducteurs natifs couvre 50+ langues et tous les domaines de spécialité. Chaque traduction est révisée par un second expert avant livraison.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Traduction juridique et contractuelle</li>
+          <li><i class="fas fa-check-circle"></i> Traduction médicale et pharmaceutique</li>
+          <li><i class="fas fa-check-circle"></i> Traduction technique et industrielle</li>
+          <li><i class="fas fa-check-circle"></i> Traduction marketing et publicitaire</li>
+          <li><i class="fas fa-check-circle"></i> Traduction littéraire et éditoriale</li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark">Demander un devis</a>
+      </div>
+    </div>
+
+    <div id="interpretation" class="service-detail animate">
+      <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=700&q=80" alt="Interprétation de conférence">
+      <div class="service-detail-content">
+        <h2>Interprétation <span class="text-accent">de conférence</span></h2>
+        <p>Nos interprètes certifiés assurent une communication fluide lors de vos événements internationaux, qu'il s'agisse de conférences, de négociations ou de réunions d'affaires.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Interprétation simultanée en cabine</li>
+          <li><i class="fas fa-check-circle"></i> Interprétation consécutive</li>
+          <li><i class="fas fa-check-circle"></i> Interprétation chuchotée</li>
+          <li><i class="fas fa-check-circle"></i> Location d'équipements de conférence</li>
+          <li><i class="fas fa-check-circle"></i> Interprétation à distance (RSI)</li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark">Réserver un interprète</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-title animate">
+      <h2>Nos <span class="text-accent">tarifs</span></h2>
+      <div class="divider"></div>
+      <p>Des formules adaptées à tous les budgets et volumes de travail.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card animate">
+        <h3>Essentiel</h3>
+        <div class="price">0,12€ <small>/ mot</small></div>
+        <p style="font-size:0.9rem;color:#999">Idéal pour les petits projets</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Traduction standard</li>
+          <li><i class="fas fa-check"></i> 1 paire de langues</li>
+          <li><i class="fas fa-check"></i> Délai 5-7 jours</li>
+          <li><i class="fas fa-check"></i> Révision incluse</li>
+          <li><i class="fas fa-times" style="color:#ccc"></i> Traducteur spécialisé</li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark" style="width:100%">Commencer</a>
+      </div>
+      <div class="pricing-card featured animate">
+        <span class="badge-featured">Le plus populaire</span>
+        <h3>Professionnel</h3>
+        <div class="price">0,18€ <small>/ mot</small></div>
+        <p style="font-size:0.9rem;color:#999">Pour les projets réguliers</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Traducteur spécialisé</li>
+          <li><i class="fas fa-check"></i> Toutes paires de langues</li>
+          <li><i class="fas fa-check"></i> Délai 2-3 jours</li>
+          <li><i class="fas fa-check"></i> Double révision</li>
+          <li><i class="fas fa-check"></i> Gestionnaire dédié</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%">Commencer</a>
+      </div>
+      <div class="pricing-card animate">
+        <h3>Entreprise</h3>
+        <div class="price">Sur <small>devis</small></div>
+        <p style="font-size:0.9rem;color:#999">Pour les grands volumes</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Équipe dédiée</li>
+          <li><i class="fas fa-check"></i> Mémoire de traduction</li>
+          <li><i class="fas fa-check"></i> Délais express</li>
+          <li><i class="fas fa-check"></i> Intégration API</li>
+          <li><i class="fas fa-check"></i> SLA garanti</li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark" style="width:100%">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Besoin d'un <span class="text-accent">devis personnalisé</span> ?</h2>
+    <p>Envoyez-nous votre document et recevez une estimation gratuite sous 2 heures.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-primary">Devis gratuit</a>
+      <a href="tel:+33123456789" class="btn btn-outline"><i class="fas fa-phone"></i> +33 1 23 45 67 89</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-icon">L</div>
+        <p>LinguaPro est votre partenaire de confiance pour tous vos besoins en traduction, interprétation et formation linguistique depuis 2009.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="courses.html">Formations</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html">Carrières</a></li></ul></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Traduction</a></li><li><a href="services.html">Interprétation</a></li><li><a href="services.html">Localisation</a></li><li><a href="services.html">Sous-titrage</a></li><li><a href="services.html">Relecture</a></li><li><a href="courses.html">Cours de langues</a></li></ul></div>
+      <div class="footer-col"><h5>Newsletter</h5><p style="font-size:0.9rem;margin-bottom:1rem">Recevez nos actualités et conseils linguistiques.</p><div class="footer-newsletter"><input type="email" placeholder="Votre adresse email"><button class="btn btn-primary" style="width:100%">S'abonner</button></div></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem"><p style="margin:0">&copy; 2026 LinguaPro. Tous droits réservés.</p><div style="display:flex;gap:1.5rem"><a href="legal.html">Mentions légales</a><a href="privacy.html">Politique de confidentialité</a></div></div></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

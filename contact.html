@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez LinguaPro - Formulaire de contact, coordonnées, horaires et localisation de notre agence.">
+  <title>Contact - LinguaPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hours-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    .hours-table tr { border-bottom: 1px solid var(--border); }
+    .hours-table td { padding: 0.6rem 0; font-size: 0.9rem; }
+    .hours-table td:last-child { text-align: right; font-weight: 500; color: var(--primary); }
+    .hours-table tr.today td { color: var(--accent); font-weight: 600; }
+    .quick-contact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+    .quick-card { background: var(--primary); color: white; border-radius: 12px; padding: 2rem; text-align: center; }
+    .quick-card i { font-size: 2rem; color: var(--accent); margin-bottom: 1rem; }
+    .quick-card h4 { color: white; margin-bottom: 0.5rem; }
+    .quick-card p { color: rgba(255,255,255,0.8); margin: 0; font-size: 0.9rem; }
+    .quick-card a { color: var(--accent); font-weight: 600; }
+    @media (max-width: 768px) { .quick-contact { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      <div class="logo-icon">L</div>
+      <span>Lingua<strong>Pro</strong></span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="courses.html">Formations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="gallery.html">Galerie</a></li>
+      <li><a href="careers.html">Carrières</a></li>
+      <li><a href="contact.html" class="btn btn-primary active">Contact</a></li>
+    </ul>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Nous <span class="text-accent">contacter</span></h1>
+    <p>Notre équipe est disponible pour répondre à toutes vos questions et vous accompagner dans vos projets.</p>
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a><span>/</span><span class="current">Contact</span>
+    </nav>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <!-- QUICK CONTACT -->
+    <div class="quick-contact animate">
+      <div class="quick-card">
+        <i class="fas fa-phone"></i>
+        <h4>Téléphone</h4>
+        <p>Lun-Ven, 9h-18h</p>
+        <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+      </div>
+      <div class="quick-card">
+        <i class="fas fa-envelope"></i>
+        <h4>Email</h4>
+        <p>Réponse sous 24h</p>
+        <a href="mailto:contact@linguapro.fr">contact@linguapro.fr</a>
+      </div>
+      <div class="quick-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>Adresse</h4>
+        <p>12 Rue de la Paix<br>75001 Paris, France</p>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM + INFO -->
+    <div class="contact-grid">
+      <div class="animate">
+        <h3>Informations pratiques</h3>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div><h5>Téléphone principal</h5><p>+33 1 23 45 67 89</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-phone-alt"></i></div>
+          <div><h5>Urgences & devis express</h5><p>+33 6 12 34 56 78</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div><h5>Email général</h5><p>contact@linguapro.fr</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+          <div><h5>Formations</h5><p>formations@linguapro.fr</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><h5>Adresse</h5><p>12 Rue de la Paix, 75001 Paris<br>Métro : Opéra (lignes 3, 7, 8)</p></div>
+        </div>
+
+        <h4 style="margin-top:2rem;margin-bottom:0.5rem">Horaires d'ouverture</h4>
+        <table class="hours-table">
+          <tr><td>Lundi</td><td>9h00 – 18h00</td></tr>
+          <tr><td>Mardi</td><td>9h00 – 18h00</td></tr>
+          <tr><td>Mercredi</td><td>9h00 – 18h00</td></tr>
+          <tr class="today"><td>Jeudi</td><td>9h00 – 18h00</td></tr>
+          <tr><td>Vendredi</td><td>9h00 – 17h00</td></tr>
+          <tr><td>Samedi</td><td>10h00 – 13h00</td></tr>
+          <tr><td style="color:#999">Dimanche</td><td style="color:#999">Fermé</td></tr>
+        </table>
+
+        <div style="display:flex;gap:0.8rem;margin-top:2rem">
+          <a href="#" class="btn btn-dark" style="padding:0.5rem 1rem"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="btn btn-dark" style="padding:0.5rem 1rem"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="btn btn-dark" style="padding:0.5rem 1rem"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="btn btn-dark" style="padding:0.5rem 1rem"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="btn btn-dark" style="padding:0.5rem 1rem"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="animate">
+        <div class="contact-form" style="background:white;border-radius:12px;padding:2.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.07)">
+          <h3 style="margin-bottom:1.5rem">Envoyez-nous un message</h3>
+          <form data-form="contact">
+            <div class="form-row">
+              <div class="form-group"><label for="c-firstname">Prénom *</label><input type="text" id="c-firstname" required placeholder="Votre prénom"></div>
+              <div class="form-group"><label for="c-lastname">Nom *</label><input type="text" id="c-lastname" required placeholder="Votre nom"></div>
+            </div>
+            <div class="form-group"><label for="c-email">Email *</label><input type="email" id="c-email" required placeholder="votre@email.com"></div>
+            <div class="form-group"><label for="c-phone">Téléphone</label><input type="tel" id="c-phone" placeholder="+33 6 00 00 00 00"></div>
+            <div class="form-group"><label for="c-company">Entreprise</label><input type="text" id="c-company" placeholder="Nom de votre entreprise"></div>
+            <div class="form-group"><label for="c-subject">Sujet *</label>
+              <select id="c-subject" required>
+                <option value="">Sélectionner un sujet</option>
+                <option>Demande de devis traduction</option>
+                <option>Demande de devis interprétation</option>
+                <option>Inscription à une formation</option>
+                <option>Partenariat</option>
+                <option>Candidature</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="c-message">Message *</label><textarea id="c-message" required placeholder="Décrivez votre projet ou votre demande..."></textarea></div>
+            <div class="form-group" style="display:flex;align-items:flex-start;gap:0.8rem">
+              <input type="checkbox" id="c-rgpd" required style="width:auto;margin-top:3px">
+              <label for="c-rgpd" style="font-size:0.85rem;font-weight:400;color:var(--text)">J'accepte que mes données soient traitées conformément à la <a href="privacy.html" style="color:var(--accent)">politique de confidentialité</a> de LinguaPro. *</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAP -->
+    <div class="map-container animate" style="margin-top:4rem">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.142047744348!2d2.3308!3d48.8698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sPlace%20de%20l'Op%C3%A9ra%2C%2075009%20Paris!5e0!3m2!1sfr!2sfr!4v1680000000000"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localisation LinguaPro - Paris Opéra">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo-icon">L</div><p>LinguaPro est votre partenaire de confiance pour tous vos besoins en traduction, interprétation et formation linguistique depuis 2009.</p><div class="social-links"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="courses.html">Formations</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html">Carrières</a></li></ul></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Traduction</a></li><li><a href="services.html">Interprétation</a></li><li><a href="services.html">Localisation</a></li><li><a href="services.html">Sous-titrage</a></li><li><a href="services.html">Relecture</a></li><li><a href="courses.html">Cours de langues</a></li></ul></div>
+      <div class="footer-col"><h5>Newsletter</h5><p style="font-size:0.9rem;margin-bottom:1rem">Recevez nos actualités et conseils linguistiques.</p><div class="footer-newsletter"><input type="email" placeholder="Votre adresse email"><button class="btn btn-primary" style="width:100%">S'abonner</button></div></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem"><p style="margin:0">&copy; 2026 LinguaPro. Tous droits réservés.</p><div style="display:flex;gap:1.5rem"><a href="legal.html">Mentions légales</a><a href="privacy.html">Politique de confidentialité</a></div></div></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

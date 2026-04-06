@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog LinguaPro - Actualités, conseils et tendances sur la traduction, l'interprétation et la formation linguistique.">
+  <title>Blog - LinguaPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .blog-layout { display: grid; grid-template-columns: 1fr 320px; gap: 3rem; }
+    .blog-sidebar { position: sticky; top: 100px; height: fit-content; }
+    .sidebar-widget { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.07); margin-bottom: 2rem; }
+    .sidebar-widget h4 { margin-bottom: 1.2rem; padding-bottom: 0.8rem; border-bottom: 2px solid var(--border); }
+    .sidebar-widget h4::after { display: none; }
+    .search-box { display: flex; gap: 0; }
+    .search-box input { flex: 1; padding: 0.7rem 1rem; border: 2px solid var(--border); border-right: none; border-radius: 6px 0 0 6px; font-family: var(--font-main); }
+    .search-box button { padding: 0.7rem 1rem; background: var(--primary); color: white; border: none; border-radius: 0 6px 6px 0; cursor: pointer; }
+    .category-list li { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .category-list li:last-child { border: none; }
+    .category-list li a:hover { color: var(--accent); }
+    .category-list li span { background: var(--light); padding: 0.1rem 0.5rem; border-radius: 10px; font-size: 0.8rem; }
+    .recent-post { display: flex; gap: 1rem; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+    .recent-post:last-child { border: none; margin: 0; padding: 0; }
+    .recent-post img { width: 70px; height: 70px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+    .recent-post h6 { font-size: 0.85rem; margin-bottom: 0.3rem; line-height: 1.4; }
+    .recent-post h6 a:hover { color: var(--accent); }
+    .recent-post span { font-size: 0.78rem; color: #999; }
+    .tags-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tags-cloud a { padding: 0.3rem 0.8rem; border: 1px solid var(--border); border-radius: 20px; font-size: 0.82rem; transition: var(--transition); }
+    .tags-cloud a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+    .featured-post { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.07); margin-bottom: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; }
+    .featured-post .thumb { height: 300px; overflow: hidden; }
+    .featured-post .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .featured-post .body { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+    .featured-post .badge-featured { background: var(--accent); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+    @media (max-width: 992px) { .blog-layout { grid-template-columns: 1fr; } .blog-sidebar { position: static; } .featured-post { grid-template-columns: 1fr; } .featured-post .thumb { height: 220px; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      <div class="logo-icon">L</div>
+      <span>Lingua<strong>Pro</strong></span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="courses.html">Formations</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="gallery.html">Galerie</a></li>
+      <li><a href="careers.html">Carrières</a></li>
+      <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+    </ul>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Notre <span class="text-accent">Blog</span></h1>
+    <p>Actualités, conseils et tendances du monde de la traduction et des langues.</p>
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a><span>/</span><span class="current">Blog</span>
+    </nav>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <!-- FEATURED -->
+    <div class="featured-post animate">
+      <div class="thumb">
+        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80" alt="Article vedette">
+      </div>
+      <div class="body">
+        <span class="badge-featured"><i class="fas fa-star"></i> Article vedette</span>
+        <span class="category" style="display:inline-block;background:var(--accent);color:white;padding:0.2rem 0.8rem;border-radius:20px;font-size:0.78rem;font-weight:600;margin-bottom:0.8rem">Traduction</span>
+        <h2 style="font-size:1.4rem;margin-bottom:1rem"><a href="#">L'IA dans la traduction : menace ou opportunité pour les traducteurs ?</a></h2>
+        <p style="font-size:0.9rem">Analyse approfondie des impacts de l'intelligence artificielle sur le métier de traducteur et les nouvelles compétences requises pour rester compétitif dans un marché en mutation.</p>
+        <div style="display:flex;gap:1rem;font-size:0.82rem;color:#999;margin:1rem 0">
+          <span><i class="far fa-calendar"></i> 28 mars 2026</span>
+          <span><i class="far fa-user"></i> Marie Leclerc</span>
+          <span><i class="far fa-comment"></i> 12 commentaires</span>
+        </div>
+        <a href="#" class="btn btn-dark" style="padding:0.5rem 1.2rem;font-size:0.9rem">Lire l'article</a>
+      </div>
+    </div>
+
+    <div class="blog-layout">
+      <div>
+        <div class="blog-grid" style="grid-template-columns:1fr 1fr">
+          <div class="blog-card animate">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Apprendre une langue"></div>
+            <div class="body">
+              <span class="category">Formation</span>
+              <div class="meta"><span><i class="far fa-calendar"></i> 15 mars 2026</span><span><i class="far fa-user"></i> Jean Moreau</span></div>
+              <h3><a href="#">5 méthodes efficaces pour apprendre une langue rapidement</a></h3>
+              <p>Découvrez les techniques pédagogiques modernes qui accélèrent l'apprentissage des langues étrangères.</p>
+              <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="blog-card animate">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80" alt="Localisation logiciel"></div>
+            <div class="body">
+              <span class="category">Localisation</span>
+              <div class="meta"><span><i class="far fa-calendar"></i> 5 mars 2026</span><span><i class="far fa-user"></i> Amina Khoury</span></div>
+              <h3><a href="#">Localisation de logiciels : les erreurs à éviter</a></h3>
+              <p>Guide pratique pour réussir la localisation de vos applications et éviter les pièges culturels courants.</p>
+              <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="blog-card animate">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Interprétation"></div>
+            <div class="body">
+              <span class="category">Interprétation</span>
+              <div class="meta"><span><i class="far fa-calendar"></i> 20 fév. 2026</span><span><i class="far fa-user"></i> Pierre Fontaine</span></div>
+              <h3><a href="#">Interprétation à distance : avantages et limites</a></h3>
+              <p>Tour d'horizon des solutions RSI (Remote Simultaneous Interpretation) et leur impact sur les conférences.</p>
+              <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="blog-card animate">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80" alt="Certifications langues"></div>
+            <div class="body">
+              <span class="category">Certifications</span>
+              <div class="meta"><span><i class="far fa-calendar"></i> 10 fév. 2026</span><span><i class="far fa-user"></i> Léa Bernard</span></div>
+              <h3><a href="#">TOEFL, IELTS, DELF : quelle certification choisir ?</a></h3>
+              <p>Comparatif des principales certifications linguistiques internationales pour orienter votre choix.</p>
+              <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="blog-card animate">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Traduction juridique"></div>
+            <div class="body">
+              <span class="category">Traduction</span>
+              <div class="meta"><span><i class="far fa-calendar"></i> 1 fév. 2026</span><span><i class="far fa-user"></i> Claire Dubois</span></div>
+              <h3><a href="#">La traduction juridique : précision et responsabilité</a></h3>
+              <p>Pourquoi la traduction de documents juridiques exige une expertise spécifique et des traducteurs assermentés.</p>
+              <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="blog-card animate">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80" alt="Langues du futur"></div>
+            <div class="body">
+              <span class="category">Tendances</span>
+              <div class="meta"><span><i class="far fa-calendar"></i> 20 jan. 2026</span><span><i class="far fa-user"></i> Karim Mansouri</span></div>
+              <h3><a href="#">Les langues les plus demandées en 2026</a></h3>
+              <p>Analyse des tendances du marché : quelles langues apprendre pour booster votre carrière cette année ?</p>
+              <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center;gap:0.5rem;margin-top:3rem">
+          <button class="btn btn-dark" style="padding:0.5rem 1rem">1</button>
+          <button class="btn" style="padding:0.5rem 1rem;border:2px solid var(--border)">2</button>
+          <button class="btn" style="padding:0.5rem 1rem;border:2px solid var(--border)">3</button>
+          <button class="btn" style="padding:0.5rem 1rem;border:2px solid var(--border)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="blog-sidebar">
+        <div class="sidebar-widget animate">
+          <h4>Rechercher</h4>
+          <div class="search-box">
+            <input type="text" placeholder="Rechercher un article...">
+            <button aria-label="Rechercher"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div class="sidebar-widget animate">
+          <h4>Catégories</h4>
+          <ul class="category-list">
+            <li><a href="#">Traduction</a><span>12</span></li>
+            <li><a href="#">Formation</a><span>8</span></li>
+            <li><a href="#">Interprétation</a><span>5</span></li>
+            <li><a href="#">Localisation</a><span>6</span></li>
+            <li><a href="#">Certifications</a><span>4</span></li>
+            <li><a href="#">Tendances</a><span>9</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-widget animate">
+          <h4>Articles récents</h4>
+          <div class="recent-post">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=100&q=80" alt="">
+            <div><h6><a href="#">L'IA dans la traduction : menace ou opportunité ?</a></h6><span>28 mars 2026</span></div>
+          </div>
+          <div class="recent-post">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=100&q=80" alt="">
+            <div><h6><a href="#">5 méthodes pour apprendre une langue rapidement</a></h6><span>15 mars 2026</span></div>
+          </div>
+          <div class="recent-post">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=100&q=80" alt="">
+            <div><h6><a href="#">Localisation de logiciels : les erreurs à éviter</a></h6><span>5 mars 2026</span></div>
+          </div>
+        </div>
+        <div class="sidebar-widget animate">
+          <h4>Tags</h4>
+          <div class="tags-cloud">
+            <a href="#">Traduction</a><a href="#">Langues</a><a href="#">IA</a><a href="#">TOEFL</a>
+            <a href="#">Localisation</a><a href="#">CPF</a><a href="#">Anglais</a><a href="#">Arabe</a>
+            <a href="#">Interprétation</a><a href="#">Formation</a><a href="#">ISO</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo-icon">L</div><p>LinguaPro est votre partenaire de confiance pour tous vos besoins en traduction, interprétation et formation linguistique depuis 2009.</p><div class="social-links"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="courses.html">Formations</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html">Carrières</a></li></ul></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Traduction</a></li><li><a href="services.html">Interprétation</a></li><li><a href="services.html">Localisation</a></li><li><a href="services.html">Sous-titrage</a></li><li><a href="services.html">Relecture</a></li><li><a href="courses.html">Cours de langues</a></li></ul></div>
+      <div class="footer-col"><h5>Newsletter</h5><p style="font-size:0.9rem;margin-bottom:1rem">Recevez nos actualités et conseils linguistiques.</p><div class="footer-newsletter"><input type="email" placeholder="Votre adresse email"><button class="btn btn-primary" style="width:100%">S'abonner</button></div></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem"><p style="margin:0">&copy; 2026 LinguaPro. Tous droits réservés.</p><div style="display:flex;gap:1.5rem"><a href="legal.html">Mentions légales</a><a href="privacy.html">Politique de confidentialité</a></div></div></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galerie LinguaPro - Photos de nos locaux, événements, formations et certifications.">
+  <title>Galerie - LinguaPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; }
+    .lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; color: white; font-size: 2rem; cursor: pointer; background: none; border: none; line-height: 1; }
+    .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); border: none; color: white; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; transition: var(--transition); }
+    .lightbox-nav:hover { background: var(--accent); }
+    .lightbox-nav.prev { left: 1.5rem; }
+    .lightbox-nav.next { right: 1.5rem; }
+    .lightbox-caption { position: absolute; bottom: 1.5rem; color: rgba(255,255,255,0.8); font-size: 0.9rem; text-align: center; width: 100%; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      <div class="logo-icon">L</div>
+      <span>Lingua<strong>Pro</strong></span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="courses.html">Formations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="gallery.html" class="active">Galerie</a></li>
+      <li><a href="careers.html">Carrières</a></li>
+      <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+    </ul>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Notre <span class="text-accent">Galerie</span></h1>
+    <p>Découvrez nos locaux, nos événements et les moments forts de la vie de LinguaPro.</p>
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a><span>/</span><span class="current">Galerie</span>
+    </nav>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-filter animate">
+      <button class="active" data-filter="all">Tout</button>
+      <button data-filter="locaux">Nos locaux</button>
+      <button data-filter="formations">Formations</button>
+      <button data-filter="evenements">Événements</button>
+      <button data-filter="certifications">Certifications</button>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item animate" data-category="locaux" onclick="openLightbox(0)">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Bureaux LinguaPro">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="formations" onclick="openLightbox(1)">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Salle de formation">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="evenements" onclick="openLightbox(2)">
+        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Conférence internationale">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="certifications" onclick="openLightbox(3)">
+        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Remise de certifications">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="locaux" onclick="openLightbox(4)">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Espace de travail">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="formations" onclick="openLightbox(5)">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Cours de langue">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="evenements" onclick="openLightbox(6)">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80" alt="Séminaire d'entreprise">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="locaux" onclick="openLightbox(7)">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80" alt="Salle de réunion">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="certifications" onclick="openLightbox(8)">
+        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&q=80" alt="Diplômes et certifications">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="formations" onclick="openLightbox(9)">
+        <img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=600&q=80" alt="Atelier de langue">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="evenements" onclick="openLightbox(10)">
+        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Forum des langues">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item animate" data-category="locaux" onclick="openLightbox(11)">
+        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" alt="Bibliothèque linguistique">
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse d'images">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">&times;</button>
+  <button class="lightbox-nav prev" onclick="lightboxNav(-1)" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav next" onclick="lightboxNav(1)" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo-icon">L</div><p>LinguaPro est votre partenaire de confiance pour tous vos besoins en traduction, interprétation et formation linguistique depuis 2009.</p><div class="social-links"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="courses.html">Formations</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html">Carrières</a></li></ul></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Traduction</a></li><li><a href="services.html">Interprétation</a></li><li><a href="services.html">Localisation</a></li><li><a href="services.html">Sous-titrage</a></li><li><a href="services.html">Relecture</a></li><li><a href="courses.html">Cours de langues</a></li></ul></div>
+      <div class="footer-col"><h5>Newsletter</h5><p style="font-size:0.9rem;margin-bottom:1rem">Recevez nos actualités et conseils linguistiques.</p><div class="footer-newsletter"><input type="email" placeholder="Votre adresse email"><button class="btn btn-primary" style="width:100%">S'abonner</button></div></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem"><p style="margin:0">&copy; 2026 LinguaPro. Tous droits réservés.</p><div style="display:flex;gap:1.5rem"><a href="legal.html">Mentions légales</a><a href="privacy.html">Politique de confidentialité</a></div></div></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  const galleryImages = Array.from(document.querySelectorAll('.gallery-item img'));
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightbox-img').src = galleryImages[index].src;
+    document.getElementById('lightbox-caption').textContent = galleryImages[index].alt;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function lightboxNav(dir) {
+    const visible = galleryImages.filter(img => img.closest('.gallery-item').style.display !== 'none');
+    const idx = visible.findIndex(img => img.src === document.getElementById('lightbox-img').src);
+    const next = (idx + dir + visible.length) % visible.length;
+    document.getElementById('lightbox-img').src = visible[next].src;
+    document.getElementById('lightbox-caption').textContent = visible[next].alt;
+  }
+
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') lightboxNav(1);
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+  });
+</script>
+</body>
+</html>

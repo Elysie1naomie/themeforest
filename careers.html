@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carrières LinguaPro - Rejoignez notre équipe de traducteurs, interprètes et formateurs linguistiques.">
+  <title>Carrières - LinguaPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .perks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+    .perk-card { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+    .perk-card .icon { font-size: 2rem; color: var(--accent); margin-bottom: 0.8rem; }
+    .perk-card h4 { margin-bottom: 0.4rem; font-size: 1rem; }
+    .perk-card p { font-size: 0.88rem; margin: 0; }
+    .apply-form { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+    .file-upload { border: 2px dashed var(--border); border-radius: 8px; padding: 2rem; text-align: center; cursor: pointer; transition: var(--transition); }
+    .file-upload:hover { border-color: var(--primary); background: var(--light); }
+    .file-upload i { font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .file-upload p { margin: 0; font-size: 0.9rem; color: #888; }
+    .file-upload input[type="file"] { display: none; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      <div class="logo-icon">L</div>
+      <span>Lingua<strong>Pro</strong></span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="courses.html">Formations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="gallery.html">Galerie</a></li>
+      <li><a href="careers.html" class="active">Carrières</a></li>
+      <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+    </ul>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Rejoignez <span class="text-accent">LinguaPro</span></h1>
+    <p>Construisez votre carrière au sein d'une équipe passionnée par les langues et la communication internationale.</p>
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a><span>/</span><span class="current">Carrières</span>
+    </nav>
+  </div>
+</div>
+
+<!-- WHY JOIN US -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-title animate">
+      <h2>Pourquoi nous <span class="text-accent">rejoindre</span> ?</h2>
+      <div class="divider"></div>
+      <p>Un environnement de travail stimulant, des projets variés et une équipe soudée.</p>
+    </div>
+    <div class="perks-grid">
+      <div class="perk-card animate">
+        <div class="icon"><i class="fas fa-globe-europe"></i></div>
+        <h4>Projets internationaux</h4>
+        <p>Travaillez sur des projets variés avec des clients du monde entier.</p>
+      </div>
+      <div class="perk-card animate">
+        <div class="icon"><i class="fas fa-chart-line"></i></div>
+        <h4>Évolution de carrière</h4>
+        <p>Plan de développement personnalisé et formations continues offertes.</p>
+      </div>
+      <div class="perk-card animate">
+        <div class="icon"><i class="fas fa-laptop-house"></i></div>
+        <h4>Télétravail flexible</h4>
+        <p>Politique de télétravail hybride adaptée à votre mode de vie.</p>
+      </div>
+      <div class="perk-card animate">
+        <div class="icon"><i class="fas fa-users"></i></div>
+        <h4>Équipe multiculturelle</h4>
+        <p>Collaborez avec des collègues de 20 nationalités différentes.</p>
+      </div>
+      <div class="perk-card animate">
+        <div class="icon"><i class="fas fa-heartbeat"></i></div>
+        <h4>Bien-être au travail</h4>
+        <p>Mutuelle premium, tickets restaurant et activités team building.</p>
+      </div>
+      <div class="perk-card animate">
+        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+        <h4>Formation continue</h4>
+        <p>Budget formation annuel et accès à nos cours de langues gratuits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOB OFFERS -->
+<section class="section">
+  <div class="container">
+    <div class="section-title animate">
+      <h2>Offres d'emploi <span class="text-accent">disponibles</span></h2>
+      <div class="divider"></div>
+      <p>Découvrez nos postes ouverts et trouvez celui qui correspond à votre profil.</p>
+    </div>
+    <div class="job-list">
+      <div class="job-card animate">
+        <div class="job-info">
+          <h3>Traducteur(trice) EN-FR spécialisé(e) juridique</h3>
+          <p style="font-size:0.9rem;margin:0.5rem 0">Nous recherchons un traducteur expérimenté pour renforcer notre pôle juridique et traiter des contrats, actes notariés et documents judiciaires.</p>
+          <div class="job-tags">
+            <span class="job-tag type">CDI</span>
+            <span class="job-tag location">Paris / Télétravail</span>
+            <span class="job-tag dept">Traduction</span>
+          </div>
+        </div>
+        <a href="#apply" class="btn btn-primary" style="white-space:nowrap">Postuler</a>
+      </div>
+      <div class="job-card animate">
+        <div class="job-info">
+          <h3>Interprète de conférence FR-AR-EN</h3>
+          <p style="font-size:0.9rem;margin:0.5rem 0">Interprète trilingue pour missions ponctuelles et contrats cadre. Expérience en interprétation simultanée requise, disponibilité pour déplacements.</p>
+          <div class="job-tags">
+            <span class="job-tag type">Freelance</span>
+            <span class="job-tag location">France & International</span>
+            <span class="job-tag dept">Interprétation</span>
+          </div>
+        </div>
+        <a href="#apply" class="btn btn-primary" style="white-space:nowrap">Postuler</a>
+      </div>
+      <div class="job-card animate">
+        <div class="job-info">
+          <h3>Formateur(trice) d'anglais des affaires</h3>
+          <p style="font-size:0.9rem;margin:0.5rem 0">Formateur certifié pour animer des cours d'anglais professionnel en présentiel et en ligne. Expérience en formation d'adultes indispensable.</p>
+          <div class="job-tags">
+            <span class="job-tag type">CDD / CDI</span>
+            <span class="job-tag location">Paris</span>
+            <span class="job-tag dept">Formation</span>
+          </div>
+        </div>
+        <a href="#apply" class="btn btn-primary" style="white-space:nowrap">Postuler</a>
+      </div>
+      <div class="job-card animate">
+        <div class="job-info">
+          <h3>Chef(fe) de projet traduction</h3>
+          <p style="font-size:0.9rem;margin:0.5rem 0">Coordination des projets de traduction, gestion des équipes de traducteurs et relation client. Maîtrise des outils CAT (SDL Trados, memoQ) requise.</p>
+          <div class="job-tags">
+            <span class="job-tag type">CDI</span>
+            <span class="job-tag location">Paris</span>
+            <span class="job-tag dept">Management</span>
+          </div>
+        </div>
+        <a href="#apply" class="btn btn-primary" style="white-space:nowrap">Postuler</a>
+      </div>
+      <div class="job-card animate">
+        <div class="job-info">
+          <h3>Ingénieur(e) localisation</h3>
+          <p style="font-size:0.9rem;margin:0.5rem 0">Gestion technique des projets de localisation de logiciels et applications. Compétences en XML, HTML, outils de localisation (Phrase, Crowdin).</p>
+          <div class="job-tags">
+            <span class="job-tag type">CDI</span>
+            <span class="job-tag location">Paris / Télétravail</span>
+            <span class="job-tag dept">Localisation</span>
+          </div>
+        </div>
+        <a href="#apply" class="btn btn-primary" style="white-space:nowrap">Postuler</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="section section-alt" id="apply">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start">
+      <div class="animate">
+        <h2>Candidature <span class="text-accent">spontanée</span></h2>
+        <div style="width:60px;height:4px;background:var(--accent);border-radius:2px;margin:1rem 0 1.5rem"></div>
+        <p>Vous ne trouvez pas le poste idéal ? Envoyez-nous votre candidature spontanée. Nous étudions toutes les candidatures et vous contacterons dès qu'un poste correspondant à votre profil se libère.</p>
+        <div style="margin-top:2rem">
+          <div class="contact-item"><div class="icon"><i class="fas fa-envelope"></i></div><div><h5>Email RH</h5><p>rh@linguapro.fr</p></div></div>
+          <div class="contact-item"><div class="icon"><i class="fas fa-phone"></i></div><div><h5>Téléphone</h5><p>+33 1 23 45 67 89</p></div></div>
+          <div class="contact-item"><div class="icon"><i class="fas fa-clock"></i></div><div><h5>Délai de réponse</h5><p>Sous 5 jours ouvrés</p></div></div>
+        </div>
+      </div>
+      <div class="apply-form animate">
+        <h3>Formulaire de candidature</h3>
+        <form data-form="application" style="margin-top:1.5rem">
+          <div class="form-row">
+            <div class="form-group"><label for="app-firstname">Prénom *</label><input type="text" id="app-firstname" required placeholder="Votre prénom"></div>
+            <div class="form-group"><label for="app-lastname">Nom *</label><input type="text" id="app-lastname" required placeholder="Votre nom"></div>
+          </div>
+          <div class="form-group"><label for="app-email">Email *</label><input type="email" id="app-email" required placeholder="votre@email.com"></div>
+          <div class="form-group"><label for="app-phone">Téléphone</label><input type="tel" id="app-phone" placeholder="+33 6 00 00 00 00"></div>
+          <div class="form-group"><label for="app-position">Poste souhaité *</label>
+            <select id="app-position" required>
+              <option value="">Sélectionner un poste</option>
+              <option>Traducteur(trice) juridique EN-FR</option>
+              <option>Interprète de conférence FR-AR-EN</option>
+              <option>Formateur(trice) anglais des affaires</option>
+              <option>Chef(fe) de projet traduction</option>
+              <option>Ingénieur(e) localisation</option>
+              <option>Candidature spontanée</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="app-languages">Paires de langues</label><input type="text" id="app-languages" placeholder="Ex: FR-EN, FR-AR, ES-FR"></div>
+          <div class="form-group">
+            <label>CV (PDF, DOC) *</label>
+            <label class="file-upload" for="app-cv">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Cliquez pour télécharger votre CV<br><small>PDF ou DOC, max 5 Mo</small></p>
+              <input type="file" id="app-cv" accept=".pdf,.doc,.docx" required>
+            </label>
+          </div>
+          <div class="form-group"><label for="app-letter">Lettre de motivation</label><textarea id="app-letter" placeholder="Présentez-vous et expliquez votre motivation..."></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Envoyer ma candidature</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo-icon">L</div><p>LinguaPro est votre partenaire de confiance pour tous vos besoins en traduction, interprétation et formation linguistique depuis 2009.</p><div class="social-links"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="courses.html">Formations</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html">Carrières</a></li></ul></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Traduction</a></li><li><a href="services.html">Interprétation</a></li><li><a href="services.html">Localisation</a></li><li><a href="services.html">Sous-titrage</a></li><li><a href="services.html">Relecture</a></li><li><a href="courses.html">Cours de langues</a></li></ul></div>
+      <div class="footer-col"><h5>Newsletter</h5><p style="font-size:0.9rem;margin-bottom:1rem">Recevez nos actualités et conseils linguistiques.</p><div class="footer-newsletter"><input type="email" placeholder="Votre adresse email"><button class="btn btn-primary" style="width:100%">S'abonner</button></div></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem"><p style="margin:0">&copy; 2026 LinguaPro. Tous droits réservés.</p><div style="display:flex;gap:1.5rem"><a href="legal.html">Mentions légales</a><a href="privacy.html">Politique de confidentialité</a></div></div></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // File upload label update
+  document.getElementById('app-cv')?.addEventListener('change', function() {
+    const label = this.closest('.file-upload').querySelector('p');
+    if (this.files[0]) label.innerHTML = '<strong>' + this.files[0].name + '</strong><br><small>Fichier sélectionné</small>';
+  });
+</script>
+</body>
+</html>
